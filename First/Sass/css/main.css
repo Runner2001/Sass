@@ -1,0 +1,50 @@
+button {
+  border-radius: 7px;
+  width: 100px;
+  height: 30px;
+  border: none;
+  color: white;
+  background-color: rgba(60, 17, 250, 0.596);
+}
+
+button:hover {
+  background-color: #1202f0;
+}
+
+body {
+  background-color: #363535;
+}
+
+.main, .main2 {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+.main p, .main2 p {
+  font-weight: 400;
+}
+
+@media (max-width: 800px) {
+  .main, .main2 {
+    display: block;
+  }
+}
+
+button {
+  margin: 0 auto;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.theme {
+  background-color: white;
+  color: black;
+}
+/*# sourceMappingURL=main.css.map */

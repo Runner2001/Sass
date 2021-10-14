@@ -1,0 +1,24 @@
+$width: 100px;
+$height: 30px;
+$radius: 7px;
+$color: white;
+$background-color: rgba(60, 17, 250, 0.596);
+
+$btnsize: (
+  "width": 100px,
+  "height": 50px,
+  "radius": 7px,
+  "color": rgb(18, 2, 240),
+);
+
+button {
+  border-radius: map-get($map: $btnsize, $key: "radius");
+  width: $width;
+  height: $height;
+  border: none;
+  color: $color;
+  background-color: $background-color;
+}
+button:hover {
+  background-color: map-get($map: $btnsize, $key: "color");
+}

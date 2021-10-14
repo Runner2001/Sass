@@ -1,0 +1,65 @@
+@import "./button";
+
+$theme : true;
+$color : #363535;
+$text-color: rgb(255, 255, 255);
+$font-weight: (
+  "regular": 400,
+  "medium": 600,
+  "bold": 800,
+);
+
+//function
+@function weight($weight){
+  @return map-get($map: $font-weight, $key: $weight)
+}
+
+@mixin themechange($theme) {
+  @if $theme{
+    background-color: lighten($color: $color, $amount: 100%);
+    color : darken($color: $text-color, $amount: 100%);
+  }
+}
+
+@mixin mobile {
+  @media (max-width : 800px) {
+    @content;
+  }
+}
+
+body{
+  background-color: $color;
+}
+
+.main {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+
+  p {
+    //font-weight: map-get($font-weight, $key: "medium");
+    font-weight: weight(regular);
+  }
+
+  @include mobile{
+    display: block;
+  }
+
+}
+
+//extend all properties of main
+.main2{
+  @extend .main
+}
+
+button{
+  margin: 0 auto;
+  cursor: pointer;
+  font-weight: map-get($map: $font-weight, $key: "regular");
+}
+
+.theme{
+  @include themechange(true);
+}
