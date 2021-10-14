@@ -1,6 +1,16 @@
-$text-color : red;
+$text-color: red;
+$font-weight: (
+  "regular": 400,
+  "medium": 600,
+  "bold": 800,
+);
 
+.main {
+  width: 80%;
+  margin: 0 auto;
 
-p{
+  .main_p {
     color: $text-color;
+    font-weight: map-get($font-weight, $key: "medium");
+  }
 }
