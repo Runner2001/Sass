@@ -1,0 +1,69 @@
+.home {
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.home .firstname {
+  font-weight: 700;
+}
+
+.home .lastname {
+  color: #4ceb66;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(54, 53, 53, 0.9)), to(rgba(54, 53, 53, 0.7)));
+  background: linear-gradient(to right, rgba(54, 53, 53, 0.9), rgba(54, 53, 53, 0.7));
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+main .social-icons {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+main a {
+  padding: 0.4rem;
+}
+
+main a:hover {
+  color: #4ceb66;
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: #e2e2e2;
+}
+/*# sourceMappingURL=index.css.map */
