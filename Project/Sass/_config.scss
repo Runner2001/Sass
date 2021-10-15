@@ -2,3 +2,12 @@ $primary-color : #363535;
 $secondary-color : #e2e2e2;
 $third-color : #4ceb66;
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin transition-ease {
+    transition: all 0.8s ease-in-out;
+}
