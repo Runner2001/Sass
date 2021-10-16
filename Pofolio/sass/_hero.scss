@@ -1,0 +1,106 @@
+// .hero-Section{
+//     z-index: 1;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     background: #363535;
+//     color: #fff;
+//     position: relative;
+//     top: 15vh;
+//     left: 5vw;
+//     width: 90vw;
+//     height: 70vh;
+
+//     &_text{
+//         position: relative;
+//         left: 12vw;
+        
+//         h3{
+//             font-size: 0.8rem;
+//         }
+//         .name{
+//             padding-top: 10px;
+//             padding-bottom: 10px;
+//             font-weight: 700;
+//             font-size: 3rem;
+//             color: $third-color;
+//         }
+//         p{
+//             font-size: 1rem;
+//             color: $p-color;
+//             padding-bottom: 15px;
+//         }
+//     }
+//     &_img{
+//         width: 45vw;
+//         height: 60vh;
+//         position: relative;
+//         right: 3vw;
+//         border-radius: 12px;
+//         background: $secondary-color;
+//     }
+// }
+
+.hero-Section{
+    z-index: 1;
+    background: #363535;
+    color: #fff;
+    position: relative;
+    top: 5vh;
+    left: 5vw;
+    width: 90vw;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    &_text{
+        position: relative;
+        left: 12vw;
+        
+        h3{
+            font-size: 0.8rem;
+        }
+        .name{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-weight: 700;
+            font-size: 3rem;
+            color: $third-color;
+        }
+        p{
+            font-size: 1rem;
+            color: $p-color;
+            padding-bottom: 15px;
+        }
+    }
+
+    &_img{
+        width: 45vw;
+        height: 60vh;
+        margin-right: 5vw;
+        right: 12px;
+        background: $secondary-color;
+    }
+
+    @include mobile{
+        &{
+            margin-top: 5vh;
+            width: 90vw;
+            height: 50vh;
+            position: grid;
+            grid-template-columns: 1fr;
+        }
+        &_text{
+            position: relative;
+            top: 30vh;
+            text-align: left;
+            align-items: center;
+        }
+
+        &_img{
+            visibility: hidden;
+        }
+        
+    }
+}

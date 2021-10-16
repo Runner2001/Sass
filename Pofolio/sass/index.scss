@@ -1,0 +1,142 @@
+@import "config";
+@import 'callnow';
+@import 'hero';
+
+body {
+  background-color: $primary_color;
+  font-family: "Times New Roman", Times, serif;
+}
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.bugar{
+  visibility: hidden;
+}
+
+.nav{
+  width: 100vw;
+  height: 40px;
+  background-color: $secondary_color;
+
+  &-bar{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 5vw;
+    list-style-type: none;
+    text-align: center;
+    
+    &_item{
+      padding: auto 50px;
+      margin-left: 20px;
+    }
+    .callnow{
+      margin-left: 20px;
+      margin-top: 3px;
+      align-items: center;
+    }
+  }
+}
+
+@include mobile{
+  .bugar {
+    visibility: visible;
+    position: absolute;
+    z-index: 3;
+    right: 1rem;
+    top: 1rem;
+    height: 28px;
+    height: 20px;
+    cursor: pointer;
+    @include transition;
+  
+    .btn-bugar {
+      position: absolute;
+      right: 1rem;
+      top: 0.5rem;
+      width: 28px;
+      height: 3px;
+      background: #fff;
+      @include transition;
+  
+      &::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        width: 28px;
+        height: 3px;
+        background: #fff;
+        @include transition;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        width: 20px;
+        height: 3px;
+        background: #fff;
+        @include transition;
+      }
+  
+      &.open {
+        transform: rotate(360deg);
+        background: transparent;
+  
+        &::before {
+            width: 25px;
+          transform: rotate(45deg) translate(1px, 2px);
+        }
+        &:after {
+          width: 25px;
+          transform: rotate(-45deg) translate(9px , -9px);
+        }
+      }
+    }
+  }
+  
+  .nav{
+    z-index: 2;
+      position: fixed;
+      top: 0;
+      left: 0;
+      opacity: 1;
+      visibility: hidden;
+  
+      &.open{
+          visibility: visible;
+      }
+  
+      .nav-bar{
+          width: 100vw;
+          height: 90vh;
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          overflow: hidden;
+          background: $secondary_color;
+          list-style: none;
+          justify-content: center;
+          transform: translateY(-100%);
+          @include transition;
+      
+          &.open{
+              transform: translateY(0);
+          }
+      
+      
+          &_item{
+              list-style: none;
+              padding: 0.6rem 0;
+          }
+          a{
+              font-size: 1rem;
+              display: inline-block;
+              text-decoration: none;
+              color: $primary_color;
+          }
+      }
+  }
+}
